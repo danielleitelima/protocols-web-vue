@@ -80,7 +80,7 @@ template.innerHTML = `
 `;
 
 class AppSidebarButton extends HTMLElement {
-    static observedAttributes = ['contentColor', 'containerColor', 'isSelected'];
+    static observedAttributes = ['isSelected'];
 
     constructor() {
         super();
@@ -106,10 +106,10 @@ class AppSidebarButton extends HTMLElement {
         buttonText.textContent = text;
 
         const isSelected = this.getAttribute('isSelected') === 'true';
-        const hoverColor = this.getAttribute('hoverColor');
-        const contentColorVariant = this.getAttribute('contentColorVariant');
-        const contentColor = isSelected ? this.getAttribute('contentColor') : contentColorVariant;
-        const containerColor = isSelected ? this.getAttribute('containerColor') : '';
+        const hoverColor = "var(--md-sys-color-on-surface-variant)";
+        const contentColorVariant = "var(--md-sys-color-on-surface-variant)";
+        const contentColor = isSelected ? "var(--md-sys-color-on-surface)" : contentColorVariant;
+        const containerColor = isSelected ? "var(--md-sys-color-primary-container)" : '';
 
         this.updateStyles(contentColor, containerColor, hoverColor);
     }

@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import './component/native/app-sidebar-button.js';
 import { RouterView } from "vue-router";
+import { useDark } from "@vueuse/core";
+const isDark = useDark();
 
 </script>
 
 <template>
-  <RouterView class="dark"/>
+  <RouterView :class="isDark ? 'dark' : 'light'" />
 </template>
 
 <style>

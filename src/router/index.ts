@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory} from "vue-router";
 
-import Home from "../view/Home.vue";
+import Home from "../view/ProtocolModelList.vue";
 import SignIn from "../view/SignIn.vue";
 
 const router = createRouter(
