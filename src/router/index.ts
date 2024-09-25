@@ -38,7 +38,7 @@ router.beforeEach((to, _, next) => {
         if (token) {
             next();
         } else {
-            next('/login');
+            next('/signIn');
         }
     } else {
         next();
