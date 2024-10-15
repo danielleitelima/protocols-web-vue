@@ -3,11 +3,6 @@
 import router from "../router";
 import Navigation from "../component/Navigation.vue";
 
-const onSignOut = () => {
-  localStorage.removeItem('token');
-  router.push('/signIn');
-};
-
 </script>
 
 <template>
